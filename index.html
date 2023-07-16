@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<title>Basketball Scoreboard - Versus Play</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .team {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .score {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  #clock {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .shot-clock {
+    font-size: 18px;
+    font-weight: bold;
+  }
+</style>
+
+<head>
+
+<body>
+
+  <h1>Basketball Scoreboard - Versus Play</h1>
+  <div class="container">
+    <div class="team">
+      <label for="team1Name">Team 1:</label>
+      <input type="text" id="team1Name" placeholder="Team 1">
+      <span class="score" id="team1Score">0</span>
+      <button class="btn" onclick="addScore(1, 'team1')">+1 Point</button>
+      <button class="btn" onclick="addScore(2, 'team1')">+2 Points</button>
+      <button class="btn" onclick="addScore(3, 'team1')">+3 Points</button>
+      <button class="btn" onclick="resetScore('team1')">Reset</button>
+      <br>
+      <span>Shot Clock: <span class="shot-clock" id="team1ShotClock">24</span> seconds</span>
+      <button class="btn" onclick="startShotClock('team1')">Start Shot Clock</button>
+      <button class="btn" onclick="resetShotClock('team1')">Reset Shot Clock</button>
+    </div>
+    <div class="team">
+      <label for="team2Name">Team 2:</label>
+      <input type="text" id="team2Name" placeholder="Team 2">
+      <span class="score" id="team2Score">0</span>
+      <button class="btn" onclick="addScore(1, 'team2')">+1 Point</button>
+      <button class="btn" onclick="addScore(2, 'team2')">+2 Points</button>
+      <button class="btn" onclick="addScore(3, 'team2')">+3 Points</button>
+      <button class="btn" onclick="resetScore('team2')">Reset</button>
+      <br>
+      <span>Shot Clock: <span class="shot-clock" id="team2ShotClock">24</span> seconds</span>
+      <button class="btn" onclick="startShotClock('team2')">Start Shot Clock</button>
+      <button class="btn" onclick="resetShotClock('team2')">Reset Shot Clock</button>
+    </div>
+  </div>
+  <div id="clock">00:00</div>
+
+  <script src="script.js">
+
+  </script>
+
+  <label for="gameDuration">Game Duration (minutes):</label>
+  <input type="number" id="gameDuration" min="1" step="1">
+  <button class="btn" onclick="startGame()">Start Game</button>
+  <button class="btn" onclick="submitNames()">Submit Names</button>
+</body>
+
+</html>
